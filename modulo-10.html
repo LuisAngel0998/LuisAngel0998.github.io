@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validar cédula </title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style-modulo-10.css">
+</head>
+<body class="cedula">
+	<h1>Validar cédula </h1>
+
+	<form>
+		<label for="cedula">Ingresa tu número de cédula:</label>
+		<input type="text" id="cedula" name="cedula">
+		<button type="button" onclick="validarCedula()">Validar</button>
+	</form>
+
+	<div id="resultado">
+
+	<script>
+		function validarCedula() {
+			let cedula = document.getElementById("cedula").value;
+			let cedulaValida = false;
+
+			// Verificar si la cédula tiene 11 dígitos
+			if (cedula.length == 11) {
+				// Obtener los primeros 10 dígitos
+				let primerosDiez = cedula.substring(0, 10);
+
+				// Obtener el último dígito (dígito verificador)
+				let ultimoDigito = cedula.substring(10);
+                //document.write(ultimoDigito);
+                //document.write("<br>");
+				// Calcular el valor de la suma de verificación
+				let sumaVerificacion = 0;
+
+				for (let i = 0; i < primerosDiez.length; i++) {
+					let digito = parseInt(primerosDiez.charAt(i));
+
+					if (i % 2 != 0) {
+						digito *= 2;
+						if (digito > 9) {
+							digito -= 9;
+						}
+					}
+                    //document.write("<br>" + digito);
+                    //document.write("<br>");
+                    //document.write("<br>");
+					sumaVerificacion += digito;
+                    //document.write("suma: " + sumaVerificacion);
+                    
+				}
+
+				
+				
+
+                let modulo = sumaVerificacion%10;
+                
+               let digitoVerificador = 10 - modulo;
+
+				// Verificar si el dígito verificador es igual al último dígito de la cédula
+				if (digitoVerificador == parseInt(ultimoDigito)) {
+					cedulaValida = true;
+				}
+			}
+
+
+			if (cedulaValida) {
+				resultado.innerHTML = "La cédula es válida!!!!!";
+				resultado.style.color = "green";
+			} else {
+				resultado.innerHTML = "La cédula no es válida :(";
+				resultado.style.color = "red";
+			}
+		}
+	</script>
+
+</div>
+</body>
+</html>
