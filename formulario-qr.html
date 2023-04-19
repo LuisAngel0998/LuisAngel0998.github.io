@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORMULARIO DE CONTACTOS</title>
+        <link rel="stylesheet" href="qr-style.css">
+    </head>
+       
+    <body>
+        <form action="">
+            <h2> Contactos</h2>
+            <input type="text" name="Nombres" placeholder="Nombre" id="Nombres">
+            <input type="text" name="Apellidos" placeholder="Apellido" id="Apellidos">
+            <input type="text" name="correo" placeholder="Correo" id="correo">
+            <input type="text" name="telefono" placeholder="Telefono" id="telefono">
+
+            <input type="button" value="ENVIAR" id="boton" onclick="generarQR()">
+        </form>
+
+        <div id="codigoQR">
+
+        </div>
+
+        <script>
+
+            function generarQR(){
+
+                        var nombre = document.getElementById('Nombres').value;
+                        var apellido = document.getElementById('Apellidos').value;
+                        var correo = document.getElementById('correo').value;
+                        var telefono = document.getElementById('telefono').value;
+
+                        //console.log('Name: ' + nombre + " " + apellido + " " + correo + " " + telefono);
+
+                       //google apis qr code
+
+                       var card = 'BEGIN:VCARD\n' +
+                                'VERSION:3.0\n' +
+                                'N:' + apellido + ';' + nombre + ';;;\n' +
+                                'FN:' + nombre + ' ' + apellido + '\n' +
+                                'TEL;TYPE=CELL:' + telefono + '\n' +
+                                'EMAIL:' + correo + '\n' +
+                                'END:VCARD\n';
+
+
+                        var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?data=' + encodeURIComponent(card); //url
+
+                        //var url = "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=Name:" +
+                        //nombre + "%0a Email: " + apellido + " Subject: " + correo + " Message: " + telefono;
+
+                        var ifr = `<iframe src="${qrUrl}" height="260" width="250"></iframe>`;
+
+                        document.getElementById('codigoQR').innerHTML = ifr;
+
+
+                    }
+            
+        </script>
+    </body>
+</html>
