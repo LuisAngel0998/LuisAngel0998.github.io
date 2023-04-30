@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORMULARIO DE CONTACTOS</title>
+        <link rel="stylesheet" href="grafico-style.css">
+    </head>
+       
+    <body>
+        <form action="">
+            <h2> Bebida consumida por litro en tu hogar</h2>
+            <input type="text" name="producto_1" placeholder="Agua" id="producto_1">
+            <input type="text" name="producto_2" placeholder="Jugo" id="producto_2">
+            <input type="text" name="producto_3" placeholder="Refresco" id="producto_3">
+            <input type="text" name="producto_4" placeholder="Leche" id="producto_4">
+            <input type="text" name="producto_5" placeholder="Cerveza" id="producto_5">
+            <input type="text" name="producto_6" placeholder="Otra" id="producto_6">
+
+            <input type="button" value="ENVIAR" id="boton" onclick="generar_grafica()">
+        </form>
+
+        <div>
+            <canvas id="mychart"></canvas>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+        <script>
+
+            function generar_grafica(){
+
+                var producto_1 = document.getElementById('producto_1').value;
+                var producto_2 = document.getElementById('producto_2').value;
+                var producto_3 = document.getElementById('producto_3').value;
+                var producto_4 = document.getElementById('producto_4').value;
+                var producto_5 = document.getElementById('producto_5').value;
+                var producto_6 = document.getElementById('producto_6').value;
+
+                const bebidas = document.getElementById('mychart');
+
+                new Chart(bebidas, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Agua', 'Jugo', 'Refresco', 'Leche', 'Cerveza', 'Otros'],
+                        datasets: [{
+                            label: 'Bebida por litro del hogar',
+                            data: [producto_1, producto_2, producto_3, producto_4, producto_5, producto_6],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                           y: {
+                                beginAtZero: true
+                           }
+                           
+                        }
+                    }    
+                });
+
+                }
+ 
+        </script>
+    </body>
+</html>
