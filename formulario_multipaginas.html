@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo Paciente</title>
+    <link rel="stylesheet" href="estilo_formulario_multipaginas.css" />
+  </head>
+  <body>
+    <form id="form" class="form">
+    <!--pagina 1-->
+      <fieldset>
+        <h2>Información personal</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required />
+        <label for="apellido">Telefono:</label>
+        <input type="text" id="telefono" name="telefono" required />
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required />
+        <button id="nextBtn" class="nextBtn" onclick="next()">Siguiente</button>
+      </fieldset>
+
+      <!--pagina 2-->
+      <fieldset>
+        <h2>Información de contacto</h2>
+        <label for="parentesco">Parentesco:</label>
+        <input type="text" id="parentesco" name="parentesco" required />
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre_parentesco" name="nombre_parentesco" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email_parentesco" name="email_parentesco" required />
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono_parentesco" name="telefono_parentesco" required />
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required />
+        <button id="prevBtn" class="prevBtn" onclick="prev()">Anterior</button>
+        <button id="nextBtn" class="nextBtn" onclick="next()">Siguiente</button>
+      </fieldset>
+
+      <!--pagina 3-->
+      <fieldset>
+        <h2>Información médica</h2>
+        <label for="enfermedad">Enfermedad:</label>
+        <input type="text" id="enfermedad" name="enfermedad" required />
+        <label for="tratamiento">Tratamiento:</label>
+        <input type="text" id="tratamiento" name="tratamiento" required />
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones" name="observaciones"></textarea>
+        <button id="prevBtn" class="prevBtn" onclick="prev()">Anterior</button>
+        <button type="submit" id="submitBtn" class="submitBtn" >Agregar Paciente</button>
+      </fieldset>
+    </form>
+
+    
+    <div id="confirmacion" class="confirmacion">
+        <h2>Confirmación</h2>
+        <p>Por favor, revise la siguiente información antes de agregar al paciente:</p>
+        <ul>
+          <li><strong>Nombre:</strong> <p id="confirmacion_nombre"></p></li>
+          <li><strong>Email:</strong> <p id="confirmacion_email"></p></li>
+          <li><strong>Teléfono:</strong> <p id="confirmacion_telefono"></p></li>
+          <li><strong>Síntomas:</strong> <p id="confirmacion_enfermedad"></p></li>
+          <li><strong>Tratamiento:</strong> <p id="confirmacion_tratamiento"></p></li>
+          <li><strong>Nombre de contacto de emergencia:</strong> <p id="confirmacion_nombre_parentesco"></p></li>
+          <li><strong>Teléfono de contacto de emergencia:</strong> <p id="confirmacion_telefono_parentesco"></p></li>
+        </ul>
+        <button type="submit" id="editar" class="editar" >Editar</button>
+        <button type="submit" id="enviar" class="enviar" >Enviar</button>
+        <button type="submit" id="nuevo" class="nuevo" onclick="nuevo()">Nuevo</button>
+    </div>
+
+    <script src="formulario_multipaginas_js.js"></script>
+  </body>
+</html>

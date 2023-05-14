@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1 id="hola"></h1>
+
+    <script>
+
+        fetch('/elementos.json')
+        .then(Response => Response.json())
+        .then(data => {
+            console.log(data)
+            document.getElementById('hola').innerHTML =`<h1>${data.titulo}</h1>`
+        })
+
+    </script>
+    
+</body>
+</html>

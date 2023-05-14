@@ -1,0 +1,47 @@
+[ 
+         {"titulo_personal":"CUENTAS", "url_personal":"https://www.banreservas.com/personal/cuentas"},
+         {"titulo_personal":"INVERSION", "url_personal":"https://www.banreservas.com/personal/inversiones" },
+         {"titulo_personal":"TARJETA", "url_personal":"https://www.banreservas.com/personal/tarjetas"},
+         {"titulo_personal":"PRESTAMO", "url_personal":"https://www.banreservas.com/personal/prestamos"},
+         {"titulo_personal":"SEGUROS", "url_personal" : "https://www.banreservas.com/personal/seguros"},
+         {"titulo_personal":"REMESA, IMPUESTO y SEGURO", "url_personal":"https://www.banreservas.com/personal/remesas-impuestos-y-servicios"},
+
+         {"titulo_preferente":"CUENTAS", "url_preferente":"https://www.banreservas.com/preferente/cuentas"},
+         {"titulo_preferente":"INVERSION", "url_preferente":"https://www.banreservas.com/preferente/inversiones" },
+         {"titulo_preferente":"PRESTAMOS", "url_preferente":"https://www.banreservas.com/preferente/tarjetas"},
+         {"titulo_preferente":"TARJETAS", "url_preferente":"https://www.banreservas.com/preferente/prestamos"},
+         {"titulo_preferente":"SEGUROS", "url_preferente" : "https://www.banreservas.com/preferente/seguros"},
+
+         {"titulo_pyme":"CUENTAS", "url_pyme":"https://www.banreservas.com/pyme/cuentas"},
+         {"titulo_pyme":"INVERSION", "url_pyme":"https://www.banreservas.com/pyme/inversiones" },
+         {"titulo_pyme":"FINANCIAMIENTOS", "url_pyme":"https://www.banreservas.com/pyme/financiamientos"},
+         {"titulo_pyme":"TARJETAS", "url_pyme":"https://www.banreservas.com/pyme/tarjetas"},
+         {"titulo_pyme":"SEGUROS", "url_pyme" : "https://www.banreservas.com/pyme/seguros"},
+         {"titulo_pyme":"OTROS SEGUROS", "url_pyme":"https://www.banreservas.com/pyme/otros-seguros"},
+        
+         {"titulo_empresarial":"SOLUCIONES ESPECIALIZADAS"},
+         {"titulo_empresarial":"CUENTAS"},
+         {"titulo_empresarial":"INVERSION" },
+         {"titulo_empresarial":"TARJETAS"},
+         {"titulo_empresarial":"SEGUROS"},
+         {"titulo_empresarial":"FINANCIMENTOS"},
+         {"titulo_empresarial":"NEGOCIOS INTERNACIONALES"},
+
+         {"titulo_gubernamental":"CUENTAS"},
+         {"titulo_gubernamental":"INVERSION" },
+         {"titulo_gubernamental":"TARJETAS"},
+         {"titulo_gubernamental":"SEGUROS"},
+         {"titulo_gubernamental":"FINANCIMENTOS"},
+         {"titulo_gubernamental":"REMESAS IMPUESTOS Y SERVICIOS"},
+
+         
+         {"titulo_internacional":"CUENTAS"},
+         {"titulo_internacional":"INVERSION" },
+         {"titulo_internacional":"TARJETAS"},
+         {"titulo_internacional":"PRESTAMOS"},
+         {"titulo_internacional":"SEGUROS"},
+         {"titulo_internacional":"REMESAS IMPUESTOS Y SERVICIOS"}
+        
+         
+]
+

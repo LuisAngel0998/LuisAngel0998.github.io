@@ -50,17 +50,21 @@
                     
 				}
 
-				
-				
-
-                let modulo = sumaVerificacion%10;
+            	let modulo = sumaVerificacion%10;
                 
                let digitoVerificador = 10 - modulo;
+
+
+			   if(digitoVerificador == 0){
+					digitoVerificador = 1;
+					
+				}
 
 				// Verificar si el dígito verificador es igual al último dígito de la cédula
 				if (digitoVerificador == parseInt(ultimoDigito)) {
 					cedulaValida = true;
 				}
+
 			}
 
 

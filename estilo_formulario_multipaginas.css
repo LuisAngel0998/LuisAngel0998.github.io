@@ -1,0 +1,119 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #4caf50;
+}
+
+form {
+  width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+fieldset {
+  display: none;
+}
+
+legend {
+  font-size: 24px;
+  color: #4caf50;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 90%;
+  padding: 10px;
+  border: solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  display: none;
+  background-color: #4caf50;
+  color: #fff;
+  border: solid;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+#prevBtn {
+  background-color: #ddd;
+  color: #444;
+}
+
+#prevBtn:hover {
+  background-color: #bbb;
+}
+
+#prevBtn,
+#nextBtn,
+#submitBtn {
+  display: inline;
+  float: right;
+  margin-top: 10px;
+}
+
+#prevBtn {
+  margin-right: 10px;
+}
+
+/*confirmacion*/
+
+#confirmacion {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  
+  #confirmacion h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #confirmacion ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #confirmacion li {
+    margin-bottom: 10px;
+  }
+  
+  #confirmacion li strong {
+    display: inline-block;
+    width: 200px;
+  }
+  
+  #confirmacion li span {
+    font-weight: bold;
+  }
+
