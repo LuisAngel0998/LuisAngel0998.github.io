@@ -47,7 +47,7 @@ header{
 
 header .navbar ul li a{
     font-size: 15px;
-    padding: 15px;
+    padding: 8px;
     color: azure;
     display:block;
  }
@@ -102,7 +102,7 @@ header .navbar ul li a{
 .logo-menu{
     width: 45px;
     margin-right: -10px;
-    margin-left: -10px;
+    margin-left: -15px;
     
 }
 
